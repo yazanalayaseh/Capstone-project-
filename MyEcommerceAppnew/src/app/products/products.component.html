@@ -1,0 +1,25 @@
+
+<div class="tiles" *ngIf="viewMode === 'LIST'">
+    <!-- use async pipe to get access to items of observable -->
+    <div class="tile column" *ngFor="let product of products$ | async" [myHighlight]="'#DDD'" (click)="onSelect(product)">
+
+        <span class="text">{{ product.name }}</span>
+        <span class="text">{{ product.description }}</span>
+
+        <img width="300px" src="{{ product.image }}" *ngIf="product.image" />
+
+        <span class="flex"></span>
+        <span class="footer">${{ product.price }}</span>
+    </div>
+</div>
+
+<div class="tiles" *ngIf="viewMode === 'DETAILS'">
+    <div class="selected">
+        <h2>{{ selectedProduct.name }}</h2>  
+        <h3>{{ selectedProduct.description }}</h3>  
+    
+        <img width="300px" src="{{ selectedProduct.image }}" *ngIf="selectedProduct.image" />
+    
+        <span class="footer">${{ selectedProduct.price }}</span>
+    </div>
+</div>

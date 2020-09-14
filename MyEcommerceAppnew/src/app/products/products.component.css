@@ -1,0 +1,29 @@
+.tiles {
+    height: calc(100% - 90px);
+    margin: 10px;
+}
+  
+.tile {
+    width: 300px;
+    height: 300px;
+    float: left;
+    padding: 1px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+}
+/* We're implementing hovering effect using directive
+.tile:hover {
+    background-color: #DDD;
+}
+*/
+.tile img:hover {
+    transform: scale(1.2, 1.2);
+    -ms-transform: scale(1.2, 1.2); /* IE 9 */
+    -webkit-transform: scale(1.2, 1.2);
+}
+
+.selected {
+    width: 100%;
+    text-align: center;
+}

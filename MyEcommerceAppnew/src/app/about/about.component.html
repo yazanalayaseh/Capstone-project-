@@ -1,0 +1,20 @@
+<div class="grid">
+    <table width="100%" cellpadding="5" cellspacing="5">
+        <tr>
+            <th align="left">Name</th>
+            <th align="left">Description</th>
+            <th align="left">Email</th>
+            <th align="left">Address</th>
+            <th align="left">Phone</th>
+        </tr>
+
+        <!-- use async pipe to get items of observable -->
+        <tr *ngFor="let vendor of vendors$ | async">
+            <td>{{ vendor.name }}</td>
+            <td>{{ vendor.description }}</td>
+            <td>{{ vendor.email }}</td>
+            <td>{{ vendor.address }}</td>
+            <td>{{ vendor.phone }}</td>
+        </tr>
+    </table>
+</div>

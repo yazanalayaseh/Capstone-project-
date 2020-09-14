@@ -1,0 +1,12 @@
+.grid {
+    height: calc(100% - 90px);
+    margin: 10px;
+}
+
+.grid table {
+    border-collapse: collapse;
+}
+
+.grid tr:hover {
+    background-color: #DDD;
+}
