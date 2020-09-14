@@ -1,0 +1,9 @@
+<mat-toolbar>
+    <button mat-button [class.mat-primary]="path === 'home'" (click)="go('home')">Home</button>
+    <button mat-button [class.mat-primary]="path === 'products'" (click)="go('products')">Products</button>
+    <button mat-button [class.mat-primary]="path === 'privacy'" (click)="go('privacy')">Privacy</button>
+    <button mat-button [class.mat-primary]="path === 'contact'" (click)="go('contact')">Contact</button>
+    <button mat-button [class.mat-primary]="path === 'about'" (click)="go('about')">About</button>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
